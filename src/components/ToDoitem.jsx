@@ -25,7 +25,7 @@ class ToDoitem extends PureComponent {
           )}
         </div>
       </div>
-    );
+    )
   }
 }
 
