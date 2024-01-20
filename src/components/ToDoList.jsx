@@ -10,7 +10,8 @@ class ToDolist extends Component {
           { id: 2, todo: "Study", status: "todo" }
         ],
         doneList: []
-      };
+      }
+
     
       onChange = (event) => {
         const value = event.target.value
@@ -59,6 +60,7 @@ class ToDolist extends Component {
             doneList: updateddoneList
           })
         }
+
       }
       moveBackToTodo = (id) => {
         const taskToUpdate = this.state.doneList.find((task) => task.id === id)
@@ -74,8 +76,8 @@ class ToDolist extends Component {
         }
       }
       
-      
       render() {
+
         return (
           <div className="to-do-list">
             <h3>To Do List</h3>
@@ -95,7 +97,8 @@ class ToDolist extends Component {
             <div className="column">
               <h4>Done </h4>
               {this.state.doneList.map((task) => (
-                <ToDoitem key={task.id} task={task} removeTask={this.removeTask} toggleStatus={this.toggleStatus} moveBackToTodo={this.moveBackToTodo} />
+                <ToDoitem key={task.id} task={task} removeTask={this.removeTask} toggleStatus={this.toggleStatus} moveBackToTodo={this.moveBackToTodo}  />
+
               ))}
 
               
